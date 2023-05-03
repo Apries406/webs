@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-color: #eae0e0;
+    width: 100%;
+    height: 2000px;
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+header {
+    margin-top: 10px;
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+header .logo {
+    float: left;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+header .header-nav ul {
+    float: right;
+    margin-right: 80px;
+    line-height: 80px;
+}
+
+header .header-nav ul li {
+    box-sizing: border-box;
+    width: 120px;
+    height: 40px;
+    float: left;
+}
+
+header .header-nav ul li {
+    font-size: 20px;
+    /* line-height: 80px; */
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.2);
+    opacity: 0.5;
+    border: 5px solid transparent;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+header .header-nav ul li:hover a {
+    border-bottom: 5px solid #e95e13;
+    color: #e95e13;
+    font-size: 25px;
+}
+
+.aside-nav {
+    width: calc(100% / 8);
+    display: flex;
+    font-family: 'Oswald', sans-serif;
+    transform: translateX(calc(100% * (6.8)));
+    position: sticky;
+    top: 200px;
+    opacity: 0.6;
+    z-index: 999;
+}
+
+.aside-nav ul {
+    width: 100%;
+    position: relative;
+    transform: skewY(10deg);
+}
+
+.aside-nav ul li {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    z-index: var(--i);
+    transition: 0.2s;
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.aside-nav ul li:hover {
+    background-color: #e95e13;
+    transform: translateX(-30px);
+}
+
+.aside-nav ul li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 15px;
+    height: 100%;
+    background: #eee;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+}
+
+.aside-nav ul li::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: #eee;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+
+.aside-nav ul li:hover::after,
+.aside-nav ul li:hover::before {
+    background-color: #e95e13;
+}
+
+.main {
+    width: 100%;
+    position: absolute;
+    top: 85px;
+}
+
+.main .xuanchuanpian {
+    display: flex;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.main .xuanchuanpian video {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.main .xilingxueshan {
+    /* display: flex; */
+    position: relative;
+    margin-top: 5px;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.main .xilingxueshan img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.main .xilingxueshan .dpt {
+    position: absolute;
+    font-size: 40px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-(calc(50%)));
+    transform: translateY(-(calc(50%)));
+}
